@@ -11,7 +11,6 @@ export default class Gsap {
   }
 
   init() {
-    console.log('gsap');
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
   }
 

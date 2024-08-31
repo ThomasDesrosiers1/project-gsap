@@ -1,7 +1,7 @@
 import Icons from './utils/Icons';
 import ComponentFactory from './ComponentFactory';
 import Gsap from './components/Gsap';
-import AnimatedLetters from './components/Animate';
+import Textsplit from './components/Textsplit';
 
 class Main {
   constructor() {
@@ -15,7 +15,7 @@ class Main {
 
     new ComponentFactory();
     new Gsap();
-    new AnimatedLetters(this.title);
+    new Textsplit();
   }
 }
 new Main();

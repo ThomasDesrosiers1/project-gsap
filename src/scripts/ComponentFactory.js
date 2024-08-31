@@ -1,11 +1,9 @@
 import Scrolly from './components/Scrolly';
 import Carousel from './components/Carousel';
-import Animate from './components/Animate';
 
 export default class ComponentFactory {
   constructor() {
     this.componentList = {
-      Animate,
       Scrolly,
       Carousel,
     };
