@@ -1,19 +1,13 @@
-import Youtube from './components/Youtube';
 import Scrolly from './components/Scrolly';
 import Carousel from './components/Carousel';
-import Header from './components/Header';
-import Accordion from './components/Accordion';
-import Form from './components/Form';
+import Animate from './components/Animate';
 
 export default class ComponentFactory {
   constructor() {
     this.componentList = {
-      Form,
-      Accordion,
-      Youtube,
+      Animate,
       Scrolly,
       Carousel,
-      Header,
     };
     this.init();
   }

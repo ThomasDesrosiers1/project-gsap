@@ -8,7 +8,6 @@ export default class Gsap {
 
     this.init();
     this.boxAnimation();
-    this.animateTitle();
   }
 
   init() {
@@ -18,27 +17,21 @@ export default class Gsap {
 
   boxAnimation() {
     gsap.to('.green', {
-      scaleX: 30,
-      duration: 3,
       rotate: 360,
       x: 600,
-      duration: 2,
+      duration: 0.5,
       scaleY: 0.1,
       duration: 2,
+      scaleX: 100,
+      duration: 1,
     });
-    gsap.to('.blue', { rotateY: 360, x: -200, duration: 1 });
-    gsap.to('.purple', { rotateX: 520, x: 800, duration: 3 });
-  }
-
-  animateTitle() {
-    const titles = document.querySelectorAll('#title');
-
-    for (let i = 0; i < titles.length; i++) {
-      const currentTitle = titles[i];
-
-      if ('splitText' in currentTitle.dataset) {
-        console.log('split');
-      }
-    }
+    gsap.to('.blue', { rotateZ: 45, x: 1200, duration: 2 });
+    gsap.to('.purple', {
+      rotateX: 520,
+      x: 1400,
+      duration: 2,
+      scale: 1.5,
+      duration: 1,
+    });
   }
 }

@@ -1,8 +1,14 @@
 .presentation {
-    padding: $ratio8 0;
+    padding: $ratio13 0;
 
     .wrapper {
         @extend .flex;
         @extend .flex-column;
+        gap: $ratio4;
+
+        h1 {
+            padding-top: $ratio8;
+            color: rgb(0, 198, 0);
+        }
     }
 }
