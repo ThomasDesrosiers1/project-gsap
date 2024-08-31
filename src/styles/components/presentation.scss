@@ -1,9 +1,8 @@
-.hero {
+.presentation {
     padding: $ratio8 0;
 
     .wrapper {
         @extend .flex;
         @extend .flex-column;
-        gap: $ratio4;
     }
 }

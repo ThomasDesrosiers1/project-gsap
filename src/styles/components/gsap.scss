@@ -1,5 +1,20 @@
 .box {
     height: 50px;
     width: 50px;
-    background-color: lightgreen;
+
+    &.green {
+        background-color: lightgreen;
+    }
+
+    &.blue {
+        height: 100px;
+        width: 100px;
+        background-color: blue;
+    }
+
+    &.purple {
+        height: 200px;
+        width: 200px;
+        background-color: purple;
+    }
 }
