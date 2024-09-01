@@ -1,39 +1,29 @@
 @keyframes move-text {
     0% {
-        bottom: -0.2em;
+        transform: rotate(25deg);
+        bottom: -0.3em;
         opacity: 0;
     }
 
     50% {
-        bottom: 0.2em;
+        bottom: 0.3em;
+        opacity: 0.2;
     }
 
     100% {
-        bottom: 0;
+        transform: rotate(0);
+        bottom: 0.1em;
         opacity: 1;
     }
 }
 
 .split-text span {
-    padding: 0 $ratio1;
+    padding: 0 2px;
     position: relative;
     display: inline-block;
     opacity: 0;
 }
 
-.split-text span:nth-child(2n) {
-    color: lightseagreen;
-}
-.split-text span:nth-child(3n) {
-    color: orange;
-}
-.split-text span:nth-child(4n) {
-    color: dodgerblue;
-}
-.split-text span:nth-child(5n) {
-    color: blueviolet;
-}
-
 .animated span {
-    animation: move-text 0.6s ease forwards;
+    animation: move-text 0.9s ease forwards;
 }

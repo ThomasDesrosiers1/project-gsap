@@ -1,3 +1,15 @@
+.boxes {
+    padding: $ratio8 0;
+
+    .wrapper {
+        width: 100%;
+        @extend .flex;
+        @extend .flex-column;
+        @extend .items-end;
+        gap: $ratio2;
+    }
+}
+
 .box {
     height: 20px;
     width: 20px;
@@ -17,5 +29,23 @@
         width: 200px;
         border-radius: 20px;
         background-color: purple;
+    }
+
+    &.white {
+        height: 50px;
+        width: 50px;
+        background-color: #fff;
+    }
+
+    &.red {
+        height: 20px;
+        width: 20px;
+        background-color: rgb(158, 57, 57);
+    }
+
+    &.orange {
+        height: 100px;
+        width: 100px;
+        background-color: rgb(201, 107, 25);
     }
 }

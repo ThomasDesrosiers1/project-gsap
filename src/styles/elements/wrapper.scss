@@ -6,6 +6,7 @@
     max-width: $breakpoint-lg;
     width: calc(100% - 15%);
     margin: 0 auto;
+    //overflow-x: hidden;
 
     @media screen and (max-width: $breakpoint-smd) {
     }
