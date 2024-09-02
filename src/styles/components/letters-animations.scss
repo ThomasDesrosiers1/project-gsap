@@ -1,17 +1,30 @@
 @keyframes move-text {
     0% {
-        transform: rotate(25deg);
-        bottom: -0.3em;
+        transform: rotate(20deg);
+        bottom: -0.2em;
         opacity: 0;
     }
 
-    50% {
-        bottom: 0.3em;
-        opacity: 0.2;
+    40% {
+        transform: rotate(4deg);
+        bottom: 0.2em;
+        opacity: 0.4;
+    }
+
+    70% {
+        transform: rotate(2deg);
+        bottom: -0.05em;
+        opacity: 0.6;
+    }
+
+    90% {
+        transform: rotate(0deg);
+        bottom: 0.02em;
+        opacity: 0.8;
     }
 
     100% {
-        transform: rotate(0);
+        transform: rotate(0deg);
         bottom: 0;
         opacity: 1;
     }
@@ -25,5 +38,5 @@
 }
 
 .animated span {
-    animation: move-text 0.6s ease forwards;
+    animation: move-text 1s ease-in-out forwards;
 }
