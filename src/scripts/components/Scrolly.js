@@ -1,3 +1,5 @@
+import Textsplit from './Textsplit';
+
 export default class Scrolly {
   constructor(element) {
     this.element = element;
@@ -31,6 +33,9 @@ export default class Scrolly {
 
         if ('noRepeat' in target.dataset) {
           observer.unobserve(target);
+        }
+        if ('splitText' in target.dataset) {
+          new Textsplit();
         }
       } else {
         target.classList.remove('is-active');

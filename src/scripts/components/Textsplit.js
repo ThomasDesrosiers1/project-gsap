@@ -1,6 +1,7 @@
 export default class Textsplit {
-  constructor() {
-    this.element = document.querySelector('.split-text'); // Récupère l'élément, pas le texte
+  constructor(element) {
+    this.element = element;
+    this.textElements = document.querySelectorAll('.split-text');
 
     this.init();
   }
@@ -11,20 +12,30 @@ export default class Textsplit {
   }
 
   splitTextIntoSpans() {
-    const text = this.element.textContent;
-    this.element.innerHTML = '';
+    for (let i = 0; i < this.textElements.length; i++) {
+      const element = this.textElements[i];
 
-    text.split('').forEach((char, index) => {
-      const span = document.createElement('span');
-      span.textContent = char;
-      span.style.display = 'inline-block';
-      span.style.position = 'relative';
-      span.style.animationDelay = `${0.1 + index / 10}s`; // Ajout du délai d'animation
-      this.element.appendChild(span);
-    });
+      const text = element.textContent;
+      element.innerHTML = '';
+
+      text.split('').forEach((char, index) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.display = 'inline-block';
+        span.style.position = 'relative';
+        span.style.animationDelay = `${0.1 + index / 10}s`;
+        element.appendChild(span);
+      });
+    }
   }
 
   animateLetters() {
-    this.element.classList.add('animated');
+    for (let i = 0; i < this.textElements.length; i++) {
+      const element = this.textElements[i];
+
+      if (element.classList.contains('is-active')) {
+        element.classList.add('animated');
+      }
+    }
   }
 }

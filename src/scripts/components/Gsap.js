@@ -4,7 +4,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 export default class Gsap {
   constructor(element) {
-    element = this.element;
+    this.element = element;
 
     this.init();
     this.boxAnimation();
@@ -39,7 +39,7 @@ export default class Gsap {
         trigger: '#horizontal',
         pin: true,
         scrub: 1,
-        end: '+=6000',
+        end: '+=4000',
       },
     });
   }

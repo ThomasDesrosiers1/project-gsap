@@ -1,7 +1,7 @@
 import Icons from './utils/Icons';
 import ComponentFactory from './ComponentFactory';
 import Gsap from './components/Gsap';
-import Textsplit from './components/Textsplit';
+//import Textsplit from './components/Textsplit';
 
 class Main {
   constructor() {
@@ -15,7 +15,7 @@ class Main {
 
     new ComponentFactory();
     new Gsap();
-    new Textsplit();
+    //new Textsplit();
   }
 }
 new Main();
